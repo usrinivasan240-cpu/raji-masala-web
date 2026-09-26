@@ -26,4 +26,11 @@
 .band h3{margin:0 0 8px;font-size:24px}
 .band p{margin:0;color:#c4d2ec;font-size:14px}
 @media(max-width:1000px){.grid{grid-template-columns:1fr 1fr}.weeks{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.weeks{grid-template-columns:1fr}.band{flex-direction:column;align-items:flex-start}.timeline,.custom{padding:28px}}
+@media(max-width:700px){
+  .grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(86%,340px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 4%;padding:4px 4% 18px;margin-left:-4.5%;margin-right:-4.5%;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .grid .card{scroll-snap-align:start}
+  .weeks{grid-template-columns:1fr}
+  .band{flex-direction:column;align-items:flex-start}
+  .band .btn{width:100%;min-height:50px}
+  .timeline,.custom{padding:28px}
+}
