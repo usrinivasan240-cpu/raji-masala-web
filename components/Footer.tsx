@@ -1,15 +1,16 @@
+import Link from "next/link";
 import Logo from "./Logo";
 import { SITE } from "./site";
 import styles from "./Footer.module.css";
 
 const NAV = [
-  { href: "#top", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#requirements", label: "Buyer Requirements" },
-  { href: "#audiences", label: "Supplier Sourcing" },
-  { href: "#journey", label: "Export Support" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/buyer-requirements", label: "Buyer Requirements" },
+  { href: "/products", label: "Supplier Sourcing" },
+  { href: "/services#journey", label: "Export Support" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -23,9 +24,9 @@ export default function Footer() {
         </div>
         <nav aria-label="Footer">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href}>
+            <Link key={n.href} href={n.href}>
               {n.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className={styles.contact}>

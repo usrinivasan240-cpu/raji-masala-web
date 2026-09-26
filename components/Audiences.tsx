@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 import styles from "./Audiences.module.css";
 
@@ -44,9 +45,9 @@ export default function Audiences() {
                   <li key={s}>{s}</li>
                 ))}
               </ul>
-              <a className="btn btn-navy" href="#contact">
+              <Link className="btn btn-navy" href="/contact">
                 Enquire Now
-              </a>
+              </Link>
             </article>
           </Reveal>
           <Reveal delay={120}>
@@ -58,9 +59,9 @@ export default function Audiences() {
                   <li key={s}>{s}</li>
                 ))}
               </ul>
-              <a className="btn btn-gold" href="#contact">
+              <Link className="btn btn-gold" href="/contact">
                 Enquire Now
-              </a>
+              </Link>
             </article>
           </Reveal>
         </div>

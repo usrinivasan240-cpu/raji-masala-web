@@ -5,10 +5,9 @@ const PROBLEMS = ["No verified leads?", "Quality issues?", "Supplier risks?", "N
 
 const SOLUTIONS = ["Direct supplier connections", "Premium sourcing", "Local verification", "On-ground visits", "GST / IEC checks", "QC inspections", "Pre-shipment support", "Verified buyer connections", "Full trade management"];
 
-export default function Trade() {
+export function Challenges() {
   return (
-    <>
-      <section id="challenges" className="section section-soft">
+    <section id="challenges" className="section section-soft">
         <div className="container">
           <Reveal>
             <span className="eyebrow">Problem → Solution</span>
@@ -45,7 +44,12 @@ export default function Trade() {
           </Reveal>
         </div>
       </section>
-      <section id="markets" className="section">
+  );
+}
+
+export function Markets() {
+  return (
+    <section id="markets" className="section">
         <div className="container">
           <Reveal>
             <span className="eyebrow">Export Markets</span>
@@ -86,6 +90,14 @@ export default function Trade() {
           </Reveal>
         </div>
       </section>
+  );
+}
+
+export default function Trade() {
+  return (
+    <>
+      <Challenges />
+      <Markets />
     </>
   );
 }

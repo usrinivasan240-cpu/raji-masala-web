@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 import styles from "./Hero.module.css";
 
@@ -32,15 +33,15 @@ export default function Hero() {
             with genuine business opportunities.
           </p>
           <div className={styles.ctas}>
-            <a className="btn btn-gold" href="#contact">
+            <Link className="btn btn-gold" href="/contact">
               Find Buyers
-            </a>
-            <a className="btn btn-outline" href="#audiences">
+            </Link>
+            <Link className="btn btn-outline" href="/products">
               Find Suppliers
-            </a>
-            <a className={styles.textCta} href="#contact">
+            </Link>
+            <Link className={styles.textCta} href="/contact">
               Enquire Now →
-            </a>
+            </Link>
           </div>
           <p className={styles.trust}>
             <span className={styles.tick}>✓</span> Your Trusted Partner for Safe International Trade

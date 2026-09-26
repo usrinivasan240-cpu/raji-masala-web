@@ -1,16 +1,17 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 import { SITE } from "./site";
 import styles from "./Navbar.module.css";
 
 const LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#requirements", label: "Buyer Requirements" },
-  { href: "#products", label: "Products" },
-  { href: "#journey", label: "Export Support" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/buyer-requirements", label: "Buyer Requirements" },
+  { href: "/products", label: "Products" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -18,23 +19,23 @@ export default function Navbar() {
   return (
     <header className={styles.bar}>
       <div className={`container ${styles.inner}`}>
-        <a href="#top" aria-label="RJ BUSINESS home" onClick={() => setOpen(false)}>
+        <Link href="/" aria-label="RJ BUSINESS home" onClick={() => setOpen(false)}>
           <Logo size={40} />
-        </a>
+        </Link>
         <nav className={styles.links} aria-label="Primary">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href}>
+            <Link key={l.href} href={l.href}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className={styles.cta}>
           <a className={styles.phone} href={SITE.tel}>
             {SITE.phoneDisplay}
           </a>
-          <a className="btn btn-gold" href="#contact">
+          <Link className="btn btn-gold" href="/contact">
             Enquire Now
-          </a>
+          </Link>
         </div>
         <button
           className={styles.burger}
@@ -50,13 +51,13 @@ export default function Navbar() {
       {open && (
         <nav className={styles.mobile} aria-label="Mobile">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a className="btn btn-gold" href="#contact" onClick={() => setOpen(false)}>
+          <Link className="btn btn-gold" href="/contact" onClick={() => setOpen(false)}>
             Enquire Now
-          </a>
+          </Link>
         </nav>
       )}
     </header>
