@@ -1,0 +1,6 @@
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:44px}
+.item{display:flex;align-items:center;gap:16px;padding:18px 20px;font-weight:700;font-size:14px}
+.item span{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:1px}
+.msgs{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.msgs span{font-size:12px;font-weight:700;color:var(--royal);background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;padding:9px 16px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}

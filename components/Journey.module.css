@@ -1,0 +1,7 @@
+.list{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative}
+.step::after{content:"";position:absolute;left:22px;bottom:-9px;width:16px;height:16px;background:var(--gold);border-radius:4px;transform:rotate(45deg)}
+.num{font-size:30px;font-weight:900;color:var(--gold);letter-spacing:-1px}
+.step p{font-size:14px;font-weight:700;color:var(--navy);margin:12px 0 0;line-height:1.5}
+@media(max-width:1000px){.list{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.list{grid-template-columns:1fr}.step::after{display:none}}

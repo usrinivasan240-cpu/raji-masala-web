@@ -1,0 +1,29 @@
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.card{padding:32px;height:100%}
+.num{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold)}
+.card h3{font-size:20px;letter-spacing:-.4px;margin:10px 0 18px}
+.head{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--royal);margin:18px 0 10px}
+.card ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.card li{position:relative;padding-left:22px;font-size:13.5px;color:#33415e;line-height:1.55}
+.card li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900;font-size:12px}
+.foot{margin-top:18px;font-size:13px;font-weight:800;color:var(--navy);background:var(--bg-soft);border:1px dashed var(--gold);border-radius:10px;padding:12px 14px}
+.timeline{background:var(--navy);color:#eaf0fb;border-radius:22px;padding:44px;margin-top:28px}
+.timeline h3{font-size:clamp(22px,3vw,32px);color:#fff;margin:10px 0 30px;letter-spacing:-.5px}
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.week{background:#ffffff0e;border:1px solid #ffffff24;border-radius:14px;padding:24px}
+.wtag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:2px;color:#0a1f44;background:var(--gold);border-radius:16px;padding:6px 12px;margin:0 0 12px}
+.week h4{font-size:16px;margin:0 0 14px;color:#fff}
+.week ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.week li{font-size:13px;color:#c4d2ec;padding-left:18px;position:relative;line-height:1.5}
+.week li::before{content:"–";position:absolute;left:0;color:var(--gold)}
+.custom{margin-top:28px;padding:40px}
+.custom h3{font-size:24px;margin:10px 0 6px}
+.lead{color:var(--muted);font-size:14px}
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.flow span{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--navy);background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.flow i{color:var(--gold);font-style:normal;font-weight:900}
+.band{display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(120deg,#0a1f44,#14418f);border-radius:20px;padding:36px 40px;margin-top:28px;color:#fff}
+.band h3{margin:0 0 8px;font-size:24px}
+.band p{margin:0;color:#c4d2ec;font-size:14px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr 1fr}.weeks{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.weeks{grid-template-columns:1fr}.band{flex-direction:column;align-items:flex-start}.timeline,.custom{padding:28px}}

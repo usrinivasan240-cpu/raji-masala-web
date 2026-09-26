@@ -1,0 +1,13 @@
+.foot{background:var(--navy-2);color:#c4d2ec;margin-top:0}
+.grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;padding:64px 0 48px}
+.tag{font-size:13px;font-weight:700;margin:18px 0 6px;color:#fff}
+.moto{font-size:12px;letter-spacing:2px;color:var(--gold-2);margin:0}
+.grid nav{display:grid;gap:10px;align-content:start}
+.grid nav a{font-size:13.5px;text-decoration:none;color:#c4d2ec}
+.grid nav a:hover{color:#fff}
+.contact{display:grid;gap:10px;align-content:start}
+.contact a{font-size:13.5px;text-decoration:none;color:#c4d2ec;word-break:break-all}
+.contact a:hover{color:#fff}
+.bar{border-top:1px solid #ffffff1a;padding:22px 0}
+.bar small{font-size:12px;color:#8494b5}
+@media(max-width:900px){.grid{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}}
